@@ -9,7 +9,7 @@ const Home = () => {
         title="Grow Your skills with"
         imgsrc={web}
         visit="/service"
-        ctname="contact now"
+        ctname="Get Started"
       />
     </>
   );
