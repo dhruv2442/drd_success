@@ -1,12 +1,12 @@
 import "./App.css";
-import about from "./Demo/about.svg";
+import about from "./Demo/drd_success.png";
 import Common from "./Common";
 
 const About = () => {
   return (
     <>
       <Common
-        title="Welcome to About Page"
+        title="Welcome to"
         imgsrc={about}
         visit="/contact"
         ctname="Contact now"
