@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "./drd_success",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#3598db",
   "background_color": "#ffffff"
