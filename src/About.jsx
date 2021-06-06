@@ -1,4 +1,3 @@
-import "./App.css";
 import about from "./Demo/drd_success.png";
 import Common from "./Common";
 

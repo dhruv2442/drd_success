@@ -1,6 +1,5 @@
 import { Redirect, Route, Switch } from 'react-router';
 import About from './About';
-import './App.css';
 import Contact from './Contact';
 import Footer from './Footer';
 import Home from './Home';

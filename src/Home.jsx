@@ -1,4 +1,3 @@
-import "./App.css";
 import web from "./Demo/web.svg";
 import Common from "./Common";
 
