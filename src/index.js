@@ -9,7 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <>
-    <BrowserRouter>
+    <BrowserRouter basename="/drd_success">
       <App />
     </BrowserRouter>
   </>,
