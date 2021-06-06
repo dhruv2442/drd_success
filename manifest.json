@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
+  "short_name": "drd_success",
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "drd_success.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "./drd_success",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#3598db",
   "background_color": "#ffffff"
 }
