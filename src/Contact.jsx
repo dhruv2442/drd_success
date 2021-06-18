@@ -1,26 +1,40 @@
-
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import "./App.css";
 
 const Contact = () => {
-  const [data,setData] =useState({
-      fullname:"",
-      phone:"",
-      email:"",
-      msg:""
-  })
+  const [data, setData] = useState({
+    fullname: "",
+    phone: "",
+    email: "",
+    msg: "",
+  });
   const inputEvent = (event) => {
-    const {name , value} = event.target;
-    setData((preVal)=>{
+    const { name, value } = event.target;
+    setData((preVal) => {
       return {
-        ...preVal,[name] :value,
-      }
-    })
-  }
-  const formSubmit =(e) => {
-     e.preventDefault();
-     alert(`My name is ${data.fullname}.My mobile number is ${data.phone}`)
-  }
+        ...preVal,
+        [name]: value,
+      };
+    });
+  };
+  const handleSubmits = (e) => {
+    const sId = "service_nko3gyc";
+    const tId = "drdtemplete";
+    e.preventDefault();
+    alert(`My name is ${data.fullname}.My mobile number is ${data.phone}`);
+    emailjs
+      .sendForm(sId, tId, e.target, "user_dKlfHG62xpWQAGXxKQNzH")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+      e.target.reset();
+  };
   return (
     <>
       <div className="my-5">
@@ -29,7 +43,11 @@ const Contact = () => {
       <div className="container contact_div">
         <div className="row">
           <div className="col-md-6 col-10 mx-auto">
-            <form onSubmit={formSubmit} autoComplete="false">
+            <form
+              onSubmit={handleSubmits}
+              autoComplete="false"
+              className="contact_form"
+            >
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                   FullName
@@ -42,7 +60,7 @@ const Contact = () => {
                   value={data.fullname}
                   onChange={inputEvent}
                   placeholder="Enter your Full name"
-                  autoComplete="false"
+                  autoComplete="off"
                 />
               </div>
               <div class="mb-3">
@@ -57,7 +75,7 @@ const Contact = () => {
                   value={data.phone}
                   onChange={inputEvent}
                   placeholder="mobile number"
-                  autoComplete="false"
+                  autoComplete="off"
                 />
               </div>
               <div class="mb-3">
@@ -72,7 +90,7 @@ const Contact = () => {
                   value={data.email}
                   onChange={inputEvent}
                   placeholder="name@example.com"
-                  autoComplete="false"
+                  autoComplete="off"
                 />
               </div>
               <div class="mb-3">
@@ -86,7 +104,7 @@ const Contact = () => {
                   name="msg"
                   value={data.msg}
                   onChange={inputEvent}
-                  style={{resize:"none"}}
+                  style={{ resize: "none" }}
                 ></textarea>
               </div>
               <div class="col-12">
